@@ -1,0 +1,19 @@
+# Configuration contenant des mots de passe : jamais versionnée
+.env
+.streamlit/secrets.toml
+
+# Fichiers Python temporaires
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environnements virtuels
+.venv/
+venv/
+.env.en_ligne
+
+# Fichiers volumineux, fournis dans le ZIP du rendu mais pas dans le dépôt GitHub
+# (l'application déployée n'en a pas besoin)
+novascore_dump.sql
+application_record.csv
+credit_record.csv

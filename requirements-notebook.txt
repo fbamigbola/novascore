@@ -1,0 +1,6 @@
+# Poste local complet : application + notebook + scripts de la base (installation, performances, sauvegarde).
+-r requirements.txt
+xgboost
+matplotlib
+seaborn
+jupyter
