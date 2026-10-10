@@ -1,0 +1,5 @@
+Modele,Average_Precision_CV,Ecart_type_CV,Score_train_CV,Meilleurs_parametres,Ecart_train_validation
+Logistic Regression,0.025446374196631233,0.00718906899836389,0.05553722726032404,{'modele__C': 10},0.03009085306369281
+Random Forest,0.015529604974632807,0.005972064295288814,0.30039347610159783,"{'modele__max_depth': 8, 'modele__min_samples_leaf': 20, 'modele__n_estimators': 200}",0.28486387112696504
+XGBoost,0.020864702808999255,0.0063970225427172275,0.4400254250302851,"{'modele__learning_rate': 0.1, 'modele__max_depth': 4, 'modele__n_estimators': 200, 'modele__reg_lambda': 1}",0.4191607222212858
+LightGBM,0.03134333570154215,0.010251089091502134,0.5263379601616934,"{'modele__min_child_samples': 50, 'modele__n_estimators': 200, 'modele__num_leaves': 15, 'modele__reg_lambda': 1}",0.4949946244601513

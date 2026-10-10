@@ -1,0 +1,3 @@
+Seuil,Valeur,Dossiers_signales,Vrais_defauts_captes,Faux_positifs,Defauts_manques,Precision,Recall,F2
+Par défaut,0.5,317,13,304,77,0.04100946372239748,0.14444444444444443,0.09601181683899557
+Optimisé (F2),0.6585,87,9,78,81,0.10344827586206896,0.1,0.10067114093959731
