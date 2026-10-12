@@ -590,7 +590,7 @@ def interroger_assistant(r):
         reponse = requests.post(
             p["url"], timeout=20,
             headers={"x-api-key": p["cle"], "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": p["modele"], "max_tokens": 700, "temperature": 0, "system": CONSIGNES_ASSISTANT,
+            json={"model": p["modele"], "max_tokens": 700, "system": CONSIGNES_ASSISTANT,
                   "messages": [{"role": "user", "content": json.dumps(donnees, ensure_ascii=False)}]})
         reponse.raise_for_status()
         texte = "".join(b.get("text", "") for b in reponse.json().get("content", []) if b.get("type") == "text")
@@ -888,7 +888,7 @@ def page_nouvelle_demande(utilisateur):
     refus = r["recommandation"] == "refus"
     couleur, fond = (ROUGE_FONCE, ROUGE_FOND) if refus else (VERT, VERT_FOND)
     titre = "Refus recommandé" if refus else "Accord recommandé"
-    sous_titre = "Dossier à examiner par un analyste" if refus else "Le profil présente un risque modéré"
+    sous_titre = "Dossier à examiner par un analyste" if refus else "Score inférieur au seuil de recommandation"
     icone = ('<path d="M12 3l9.5 17h-19z"></path><path d="M12 10v4.5M12 17.5v.01"></path>' if refus
              else '<circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.8 2.8L16 9.5"></path>')
     score = r["score"]
